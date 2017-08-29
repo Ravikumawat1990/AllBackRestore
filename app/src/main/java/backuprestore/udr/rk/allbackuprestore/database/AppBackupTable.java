@@ -349,10 +349,10 @@ public class AppBackupTable {
                     values.put(APPPATH, model.getAppPath());
                     values.put(ISSELECTED, model.getIsSelected());
                     values.put(ISBACKUP, model.getAppIsBackup());
-                    values.put(APPISDELETE, getDeleteed(pack));
+                    values.put(APPISDELETE, getDeleteed(model.getAppPackage()));
 
                     //String pack = "\"" + model.getAppPackage() + "\"";
-                    sqldb.update(TableName, values, APPPACKAGE + " = " + pack, null);
+                    sqldb.update(TableName, values, APPPACKAGE + " = " + model.getAppPackage(), null);
                 } catch (Exception e) {
                     e.getMessage();
                 }
@@ -400,7 +400,9 @@ public class AppBackupTable {
         ArrayList<AppModel> arrModelList = null;
         Cursor cursor = null;
         String isbackup = "";
-        String Query = "SELECT appisDelete FROM " + TableName + " where appPackage ='" + apppackage + "'";
+        String pack = "\"" + apppackage + "\"";
+
+        String Query = "SELECT appisDelete FROM " + TableName + " where appPackage ='" + pack + "'";
         cursor = sqldb.rawQuery(Query, null);
         if (cursor != null && cursor.moveToFirst()) {
             isbackup = cursor.getString(cursor.getColumnIndex(ISBACKUP));

@@ -373,7 +373,7 @@ public class AppTable {
                     values.put(ISSELECTED, getSelectedData(model.getAppPackage()));
                     values.put(ISBACKUP, getBackupData(model.getAppPackage()));
                     //String pack = "\"" + model.getAppPackage() + "\"";
-                    sqldb.update(TableName, values, APPPACKAGE + " = " + pack, null);
+                    sqldb.update(TableName, values, APPPACKAGE + " = " + model.getAppPackage(), null);
                 } catch (Exception e) {
                     e.getMessage();
                 }
@@ -447,11 +447,11 @@ public class AppTable {
     public static void updateKeyForBackup(String packageName, String value) {
         SQLiteDatabase sqldb = sqLiteDatabase;
 
-        String pack = "\"" + packageName + "\"";
+        //   String pack = "\"" + packageName + "\"";
 
         String selectQuery = "UPDATE " + TableName + " SET " + ISBACKUP
                 + " = '" + value + "' WHERE "
-                + APPPACKAGE + " =" + pack;
+                + APPPACKAGE + " =" + packageName;
         try {
             sqldb.execSQL(selectQuery);
         } catch (Exception e) {
