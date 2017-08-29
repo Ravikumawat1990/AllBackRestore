@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mtplview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_cloud_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical"
+    tools:context="backuprestore.udr.rk.allbackuprestore.view.ViewCloudAccount">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10dp"
+            android:text="ACCOUNT"
+            android:textColor="@color/textColor"
+            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/dropboxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dropbox" />
+
+            <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                android:id="@+id/txtdropBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_5dp"
+                android:text="Tab to Connect DropBox"
+                android:textColor="@color/textColor"
+                mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_10dp"
+                android:text="BACKUP OPTION"
+                android:textColor="@color/textColor"
+                mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_5dp">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wi-Fi only"
+                        android:textColor="@color/textColor"
+                        mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                    <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                        android:id="@+id/mtplTextView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Using Wi-fi only when auto save to cloud"
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                </LinearLayout>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_5dp">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+
+                    >
+
+                    <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Automatic save to Cloud"
+                        android:textColor="@color/textColor"
+                        mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                    <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Auto save record when  have new call and conection"
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                </LinearLayout>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <backuprestore.udr.rk.allbackuprestore.mtplview.MtplButton
+        android:id="@+id/btnsyncAllData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="SYNC ALL" />
+
+</RelativeLayout>

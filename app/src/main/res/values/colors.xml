@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000080</color>
+    <color name="colorPrimaryDark">#00008B</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="textColor">#FFFFFF</color>
+    <color name="lineColor">#8B0000</color>
+    <color name="bgColor">#000000</color>
+
+    <color name="SecbgColor">#000080</color>
+    <color name="SecTextColor">#FFFFFF</color>
+
+</resources>

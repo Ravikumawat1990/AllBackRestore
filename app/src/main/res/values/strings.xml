@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">All Backup And Restore</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app">A Process of utilizing the full backup and restore of an application in fastest way.</string>
+    <string name="sms">You can take backup and restore of all sms in few seconds.</string>
+    <string name="contact">Easiest way of backup and restore of all contacts.</string>
+    <string name="calllogs">Take the complete backup and restore of your all call logs.</string>
+    <string name="calender">Backup of your all reminders.</string>
+    <string name="bookmarks">You can backup of bookmarks and restore it in a safe mode.</string>
+    <string name="callrecorder">Full backup and restore of your call records</string>
+    <string name="title_activity_view_settings">Settings</string>
+    <string name="rate">Please Rate this application to 5 star if you like this app</string>
+    <string name="msg_internet_unavailable_msg">Internet appears to be offline. Please check your internet connection.</string>
+
+    <string name="changepath">CHANGE PATH</string>
+    <string name="savedback">Saved Backup path</string>
+    <string name="backint">BACKUP INTERVALS</string>
+    <string name="interman">Interval Management</string>
+    <string name="tab">Tap here to change the interval settings</string>
+    <string name="advan">ADVANCED</string>
+    <string name="cloundupload">Cloud Upload Dialog</string>
+    <string name="showDilog">Show dialog after every backup taken to upload the backup files on to the cloud</string>
+    <string name="notif">Notification</string>
+    <string name="ininoti">initate notification if  the user does not take the backup since 15 days to remind the backup</string>
+
+    <string name="backupDone">Backup completed successfully! /n Do you want to send this backup file to Cloud</string>
+
+    <string name="selectConv">Select conversation to backup</string>
+    <!-- font name -->
+    <string name="FontFace_DroidSerif_Bold">DroidSerif-Bold.ttf</string>
+    <string name="FontFace_DroidSerif_Regular">DroidSerif-Regular.ttf</string>
+    <string name="sessionExp">DROPBOX SESSION EXPIRED OR NOT LOGIN PLEASE TRY AGAIN</string>
+
+    <string name="notDat">NO DATA FOUND</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <string name="pref_header_general">General</string>
+
+    <string name="backuoMsg">PLEASE ENTER THE NAME FOR THE BACK FILE...</string>
+    <string name="backuoMsgContact">PLEASE ENTER THE NAME FOR THE BACKUO FILE WITH vcf Extension...</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="backup">BACKUP</string>
+
+    <string name="viewbackup">VIEW BACKUP</string>
+    <string name="sendtocloud">SEND TO CLOUD</string>
+    <string name="delete">DELETE ALL MESSAGES</string>
+    <string name="deletebookmark">DELETE BOOKMARKS</string>
+    <string name="deletecall">DELETE ALL CALL LOGS</string>
+    <string name="deleteCont">DELETE ALL CONTACT</string>
+    <string name="deletebackup">DELETE  BACKUP</string>
+    <string name="deletecale">DELETE  BACKUP</string>
+
+
+    <string name="backupconv">BACKUP CONVERSATATION</string>
+    <string name="backconno">BACKUP CONTACT WITH PHONE NUMBERS</string>
+
+    <string name="restore">RESTORE</string>
+    <string name="restoretorestore">RESTORE TO BROWSER</string>
+
+
+    <!--ca-app-pub-4078755711253730/4368183803-->
+    <!--ca-app-pub-6830104678086450/3952146523-->
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-9084689650077113/1632318983</string>
+    <string name="interstitial_full_screen">ca-app-pub-9084689650077113/4585785382</string>
+
+</resources>

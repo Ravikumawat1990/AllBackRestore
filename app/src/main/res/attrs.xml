@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="mtplviews">
+        <attr name="TypeFace" format="string" />
+        <attr name="Hint" format="string" />
+    </declare-styleable>
+    <declare-styleable name="headerview">
+        <attr name="headerText" format="string" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="backImgSrc" format="integer" />
+        <attr name="showMenu" format="boolean" />
+        <attr name="showBack" format="boolean" />
+        <attr name="showCalender" format="boolean" />
+        <attr name="showShare" format="boolean" />
+        <attr name="showCancel" format="boolean" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="CountDownView">
+        <attr name="showHour" format="boolean"/>
+        <attr name="showMin" format="boolean"/>
+        <attr name="showSec" format="boolean"/>
+        <attr name="showMilli" format="boolean"/>
+        <attr name="numberColor" format="reference"/>
+        <attr name="unitColor" format="reference"/>
+    </declare-styleable>
+    <!-- Attributes for RoundedImageView -->
+    <declare-styleable name="RoundedImageView">
+        <!-- Size to round image corners by. Default is zero, unrounded.
+        <b>NOTE:</b> This only works for bitmap image sources. -->
+        <attr name="corner_radius" format="dimension" />
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+</resources>

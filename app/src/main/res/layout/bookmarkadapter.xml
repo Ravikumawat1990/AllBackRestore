@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/bgColor"
+    card_view:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="@dimen/margin_5dp">
+
+
+        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+            android:id="@+id/tvtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+
+        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+            android:id="@+id/tvVerUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:padding="2dp"
+            android:textColor="@color/textColor"
+            android:textColorLink="@color/textColor"
+
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

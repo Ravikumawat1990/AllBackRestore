@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mtplview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_view_home">
+
+    <ScrollView
+        android:id="@+id/content_view_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bgColor"
+        android:scrollbarThumbVertical="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/appLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:src="@mipmap/apps" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:id="@+id/mtplTextView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:text="ALL APPLICATIONS BACKUP"
+                            android:textColor="@color/textColor"
+
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/app"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark" />
+
+
+                <LinearLayout
+                    android:id="@+id/smsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_5dp"
+                        android:src="@mipmap/sms" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="SMS BACKUP"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/sms"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:id="@+id/contactLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/contact" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:id="@+id/mtplTextView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="ALL CONTACTS BACKUP"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/contact"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:id="@+id/callLogLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/calllog" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="CALL LOGS BACKUP"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/calllogs"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/calendra" />
+
+                    <LinearLayout
+                        android:id="@+id/calanderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="CALENDER BACKUP"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/calender"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:id="@+id/bookMarkLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/bookmark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="BOOKMARKS BACKUP"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/bookmarks"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:id="@+id/callRecorderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/recorder" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="CALL RECORDER"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/callrecorder"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|left"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40dp"
+                        android:layout_height="@dimen/margin_40dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/rateus" />
+
+                    <LinearLayout
+                        android:id="@+id/rateUsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="RATE US"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Bold" />
+
+                        <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/rate"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp"
+                            mtplview:TypeFace="@string/FontFace_DroidSerif_Regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer"></com.google.android.gms.ads.AdView>
+</LinearLayout>

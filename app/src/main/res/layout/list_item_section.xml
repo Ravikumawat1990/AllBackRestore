@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+    <backuprestore.udr.rk.allbackuprestore.mtplview.MtplTextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/SecbgColor"
+        android:padding="@dimen/margin_5dp"
+        android:textColor="@color/SecTextColor"
+        android:textSize="15sp" />
+</LinearLayout>

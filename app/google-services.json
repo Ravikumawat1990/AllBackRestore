@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "865219739309",
+    "firebase_url": "https://backing-restoring-57207.firebaseio.com",
+    "project_id": "backing-restoring-57207",
+    "storage_bucket": "backing-restoring-57207.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865219739309:android:36baf34bc8785b8e",
+        "android_client_info": {
+          "package_name": "backuprestore.udr.rk.allbackuprestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865219739309-vbu9k8r0cksed5c3247i6sbu7hpjgb1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu777rN5qrjgCESHfshe-c9Udyx5VnBJE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
