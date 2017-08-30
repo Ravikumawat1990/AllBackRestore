@@ -23,6 +23,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import backuprestore.udr.rk.allbackuprestore.Model.AppModel;
@@ -105,7 +107,13 @@ public class TabFragment2 extends Fragment implements View.OnClickListener, Sear
                     appModel.setAppPackage("");
                 }
                 dialog_item.add(appModel);
-                AppBackupTable.Insert(dialog_item);
+                try {
+                    AppBackupTable.Insert(dialog_item);
+
+                } catch (Exception e) {
+
+                    e.getMessage();
+                }
             }
         }
 
@@ -149,9 +157,18 @@ public class TabFragment2 extends Fragment implements View.OnClickListener, Sear
                 if (appModel1 != null) {
                     for (int i = 0; i < appModel1.size(); i++) {
                         AppTable.updateKeyForBackup(appModel1.get(i).getAppPackage(), "0");
+                        AppTable.updateKey(appModel1.get(i).getAppPackage(), "0");
                         AppBackupTable.updateKeyForBackup(appModel1.get(i).getAppPackage(), "0");
                         AppBackupTable.updateKeyForDelete(appModel1.get(i).getAppPackage(), "1");
 
+                        File isPathExist = new File(CONSTANTS.createAppFolderForApp(thisActivity).getAbsoluteFile(), appModel1.get(i).getAppName());
+                        try {
+                            if (isPathExist.exists()) {
+                                delete(isPathExist);
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
 
                     }
                 }
@@ -202,6 +219,18 @@ public class TabFragment2 extends Fragment implements View.OnClickListener, Sear
     @Override
     public boolean onQueryTextSubmit(String query) {
         return false;
+    }
+
+    void delete(File f) throws IOException {
+
+        try {
+            boolean deleted = f.delete();
+            Log.i("TAG", "delete: " + deleted);
+        } catch (Exception e) {
+            Log.i("TAG", "delete: " + e.getMessage());
+
+        }
+
     }
 
 

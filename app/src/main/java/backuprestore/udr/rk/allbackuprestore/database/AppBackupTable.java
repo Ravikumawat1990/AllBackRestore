@@ -3,6 +3,7 @@ package backuprestore.udr.rk.allbackuprestore.database;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -349,14 +350,24 @@ public class AppBackupTable {
                     values.put(APPPATH, model.getAppPath());
                     values.put(ISSELECTED, model.getIsSelected());
                     values.put(ISBACKUP, model.getAppIsBackup());
-                    values.put(APPISDELETE, getDeleteed(model.getAppPackage()));
+                    values.put(APPISDELETE, model.getAppIsDelete());
 
-                    //String pack = "\"" + model.getAppPackage() + "\"";
-                    sqldb.update(TableName, values, APPPACKAGE + " = " + model.getAppPackage(), null);
+                    try {
+                        // int i = sqldb.update(TableName, values, APPPACKAGE + " = " + pack, null);
+                        int i = sqldb.update(TableName, values, null, null);
+                        // sqldb.update(TableName, values, "status = 0", null);
+
+                        Log.i("TAG", "Insert: " + i);
+                    } catch (Exception e) {
+                        e.getMessage();
+                    }
                 } catch (Exception e) {
                     e.getMessage();
                 }
+
             } else {
+
+
                 try {
                     values.put(APPNAME, model.getAppName());
                     values.put(APPIMAGE, model.getAppImage());
@@ -372,6 +383,7 @@ public class AppBackupTable {
                 } catch (Exception e) {
                     e.getMessage();
                 }
+
 
             }
 
@@ -405,7 +417,7 @@ public class AppBackupTable {
         String Query = "SELECT appisDelete FROM " + TableName + " where appPackage ='" + pack + "'";
         cursor = sqldb.rawQuery(Query, null);
         if (cursor != null && cursor.moveToFirst()) {
-            isbackup = cursor.getString(cursor.getColumnIndex(ISBACKUP));
+            isbackup = cursor.getString(cursor.getColumnIndex(APPISDELETE));
             cursor.close();
         }
         return isbackup;
@@ -416,7 +428,7 @@ public class AppBackupTable {
         ArrayList<AppModel> arrModelList = null;
         Cursor cursor = null;
         String isbackup = "";
-
+        //   String pack = "\"" + apppackage + "\"";
         String Query = "SELECT isBackup FROM " + TableName + " where appPackage ='" + apppackage + "'";
         cursor = sqldb.rawQuery(Query, null);
         if (cursor != null && cursor.moveToFirst()) {

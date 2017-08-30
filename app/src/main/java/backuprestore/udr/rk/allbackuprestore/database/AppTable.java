@@ -3,6 +3,7 @@ package backuprestore.udr.rk.allbackuprestore.database;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 
 import java.util.ArrayList;
@@ -373,11 +374,20 @@ public class AppTable {
                     values.put(ISSELECTED, getSelectedData(model.getAppPackage()));
                     values.put(ISBACKUP, getBackupData(model.getAppPackage()));
                     //String pack = "\"" + model.getAppPackage() + "\"";
-                    sqldb.update(TableName, values, APPPACKAGE + " = " + model.getAppPackage(), null);
+                    int i = sqldb.update(TableName, values, APPPACKAGE + " = " +pack, null);
+
+
+                    //int i = mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null);
+                    Log.i("TAG", "Insert: " + i);
+
                 } catch (Exception e) {
                     e.getMessage();
                 }
+
+
             } else {
+
+
                 try {
                     values.put(APPNAME, model.getAppName());
                     values.put(APPIMAGE, model.getAppImage());
@@ -392,6 +402,7 @@ public class AppTable {
                 } catch (Exception e) {
                     e.getMessage();
                 }
+
 
             }
 
@@ -447,7 +458,7 @@ public class AppTable {
     public static void updateKeyForBackup(String packageName, String value) {
         SQLiteDatabase sqldb = sqLiteDatabase;
 
-        //   String pack = "\"" + packageName + "\"";
+        String pack = "\"" + packageName + "\"";
 
         String selectQuery = "UPDATE " + TableName + " SET " + ISBACKUP
                 + " = '" + value + "' WHERE "
