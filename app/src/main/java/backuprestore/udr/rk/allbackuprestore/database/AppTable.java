@@ -369,13 +369,13 @@ public class AppTable {
                     values.put(APPDATETIME, model.getAppDateTime());
                     values.put(APPSIZE, model.getAppSize());
                     values.put(APPVERSION, model.getAppVerName());
-                    values.put(APPPACKAGE, model.getAppPackage());
+                    values.put(APPPACKAGE, pack);
                     values.put(APPPATH, model.getAppPath());
                     values.put(ISSELECTED, getSelectedData(model.getAppPackage()));
                     values.put(ISBACKUP, getBackupData(model.getAppPackage()));
                     //String pack = "\"" + model.getAppPackage() + "\"";
-                    int i = sqldb.update(TableName, values, APPPACKAGE + " = " +pack, null);
-
+                    //  int i = sqldb.update(TableName, values, APPPACKAGE + " = " +pack, null);
+                    int i = sqldb.update(TableName, values, "appPackage = ?", new String[]{pack});
 
                     //int i = mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null);
                     Log.i("TAG", "Insert: " + i);

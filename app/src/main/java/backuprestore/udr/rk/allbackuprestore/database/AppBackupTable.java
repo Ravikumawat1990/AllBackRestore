@@ -346,7 +346,7 @@ public class AppBackupTable {
                     values.put(APPDATETIME, model.getAppDateTime());
                     values.put(APPSIZE, model.getAppSize());
                     values.put(APPVERSION, model.getAppVerName());
-                    values.put(APPPACKAGE, model.getAppPackage());
+                    values.put(APPPACKAGE, pack);
                     values.put(APPPATH, model.getAppPath());
                     values.put(ISSELECTED, model.getIsSelected());
                     values.put(ISBACKUP, model.getAppIsBackup());
@@ -354,7 +354,10 @@ public class AppBackupTable {
 
                     try {
                         // int i = sqldb.update(TableName, values, APPPACKAGE + " = " + pack, null);
-                        int i = sqldb.update(TableName, values, null, null);
+                        //  int i = sqldb.update(TableName, values, APPPACKAGE + " = " + pack, null);
+
+                        int i = sqldb.update(TableName, values, "appPackage = ?", new String[]{pack});
+
                         // sqldb.update(TableName, values, "status = 0", null);
 
                         Log.i("TAG", "Insert: " + i);
